@@ -2,11 +2,14 @@
     position: fixed;
     top: 0;
     left: 0;
-    padding: 15px;
-    width: 100%;
+    margin: 15px;
+    padding-right: 15px;
+    width: auto;
     display: flex;
     justify-content: left;
     align-items: center;
+    border-radius: 25px;
+    background: #111;
 }
 
 .navbarItem {
@@ -15,4 +18,6 @@
     flex-flow: row;
     vertical-align: middle;
     margin: 0 10px 0 10px;
+    color: #eee;
+    font-weight:bold;
 }
