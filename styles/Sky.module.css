@@ -6,11 +6,12 @@
     background: linear-gradient(180deg, rgba(37,50,63,0.1) 20%, rgba(131,58,180,0.8) 40%, rgba(253,29,29,0.95) 50%, rgba(252,176,69,1) 65%, rgba(0,186,255,1) 80%);    
 }
 
-.timeDisplay {
-    position:fixed;
+.statusBar {
+    position:absolute;
     display:flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     top: 15px;
     right: 15px;
     background-color: #111;
@@ -19,4 +20,14 @@
     padding: 0 20px 0 20px;
     height: 48px;
     z-index: 1;
+}
+
+.statusElement {
+    display: flex;
+    padding: 0 5px 0 5px;
+    text-align: center;
+}
+
+.statusElement svg {
+    min-width: 20px;
 }
