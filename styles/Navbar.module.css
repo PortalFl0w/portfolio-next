@@ -10,6 +10,7 @@
     align-items: center;
     border-radius: 25px;
     background: #111;
+    height: 48px;
 }
 
 .navbarItem {
@@ -20,4 +21,16 @@
     margin: 0 10px 0 10px;
     color: #eee;
     font-weight:bold;
+}
+
+.navbarHome {
+    display: inline-flex;
+    flex-flow: row;
+    vertical-align: middle;
+    transition: .2s;
+}
+
+.navbarHome:hover {
+    transform: scale(1.2);
+    transition: .2s;
 }

@@ -1,0 +1,31 @@
+.sunWheel {
+    position: fixed;
+    height: 100vh;
+    top: 40vh;
+    width: 100vw;
+    /* min-width: 100vw; */
+    /* background-color: black; */
+    transition: linear 1s;
+}
+
+.sunWheel .sun {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, 100%);
+    background-color: yellow;
+    border-radius: 100%;
+}
+
+.sunWheel .moon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    transform: translate(-50%, -100%);
+    background-color: white;
+    border-radius: 100%;
+}

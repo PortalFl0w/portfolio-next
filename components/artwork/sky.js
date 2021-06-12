@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../../styles/Sky.module.css'
+import Sunwheel from './sunwheel'
 
 // Day Night Cycle notes
 // Color gradient to pick background color from depending on time of day
@@ -8,13 +9,13 @@ import styles from '../../styles/Sky.module.css'
 
 // oscillating gradient, with sun and moon in the middle of day/night rising/setting correctly.
 
-class Artwork extends Component {
-    constructor() {
-        super()
+class Sky extends Component {
+    constructor(props) {
+        super(props)
         this.renderRef = React.createRef()
         this.skyRef = React.createRef()
         this.tickRate = 1000 // Frequency of ticks in ms -- Real time is 1000
-        this.timeSpeed = 1 // Multiplier for each time step -- Real time is 1
+        this.timeSpeed = 1000 // Multiplier for each time step -- Real time is 1
         this.maxTime = 86400 // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
         this.state = {
             computedTime: null,
@@ -29,6 +30,31 @@ class Artwork extends Component {
 
     getTickRateToSeconds() {
         return this.tickRate / 1000
+    }
+
+    getComputedTimeToTimeString() {
+        let today = new Date()
+        today.setHours(0)
+        today.setMinutes(0)
+        today.setSeconds(this.state.computedTime)
+
+        let isAM = null
+        let hours = today.getHours()
+        let minutes = today.getMinutes()
+
+        if (minutes < 10) {
+            minutes = "0" + minutes
+        }
+
+        if (hours == 0) {
+            isAM = true
+        } else if (hours > 12) {
+            isAM = false
+        } else {
+            isAM = true
+        }
+
+        return hours + ":" + minutes + " " + (isAM ? "AM" : "PM")
     }
 
     getAbsoluteSkyOffset() {
@@ -84,13 +110,14 @@ class Artwork extends Component {
     render() {
         console.log("Rendering Sky")
         return (
+        <div>
+        <div className={styles.timeDisplay}>{this.getComputedTimeToTimeString()}</div>
         <div className={styles.skyContainer} style={{transition: "linear " + this.getTickRateToSeconds() + "s", top: this.state.skyOffset + "px"}} ref={this.skyRef}>
-            <div className="sky-day">
-                {this.state.time}
-            </div>
+        </div>
+        <Sunwheel computedTime={this.state.computedTime} maxTime={this.maxTime} tickRate={this.tickRate}/>
         </div>
         );
     }
 }
     
-export default Artwork;
+export default Sky;

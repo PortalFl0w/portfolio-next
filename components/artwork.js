@@ -15,8 +15,7 @@ class Artwork extends Component {
         super()
         this.renderRef = React.createRef()
         this.state = {
-            computedTime: null,
-            skyOffset: null
+            computedTime: null
         }
     }
 
@@ -29,7 +28,7 @@ class Artwork extends Component {
     render() {
         console.log("Rendering Artwork")
         return (
-        <div className="artwork">
+        <div className={styles.artwork}>
             <Sky />
             <div className="treelines">
                 <Treeline position={60} scale={0.5} initialOffset={100} hue={"#202020"} />

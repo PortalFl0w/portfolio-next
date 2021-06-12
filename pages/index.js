@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import BackgroundArtwork from '../components/artwork.js'
-import Navigation from '../components/nav.js'
+import Navigation from '../components/nav'
+import Artwork from '../components/artwork'
 
 export default function Home() {
   return (
@@ -13,14 +13,17 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <BackgroundArtwork />
+      <Artwork />
 
       <Navigation />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome.
+          
         </h1>
+
+        <p className={styles.description}>
+        </p>
 
         {/* <p className={styles.description}>
           Get started by editing{' '}
