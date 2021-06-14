@@ -31,10 +31,10 @@ class Artwork extends Component {
         <div className={styles.artwork}>
             <Sky />
             <div className="treelines">
-                <Treeline position={60} scale={0.5} initialOffset={100} hue={"#202020"} />
-                <Treeline position={40} scale={0.6} initialOffset={60} hue={"#222222"} />
-                <Treeline position={-10} scale={0.8} initialOffset={250} hue={"#111111"} />
-                <Treeline position={-50} scale={1} initialOffset={125} hue={"#000000"} />
+                <Treeline position={80} scale={0.5} initialOffset={100} hue={"#2a2a2a"} />
+                <Treeline position={60} scale={0.6} initialOffset={60} hue={"#222222"} />
+                <Treeline position={0} scale={0.8} initialOffset={250} hue={"#111111"} />
+                <Treeline position={-150} scale={1.5} initialOffset={125} hue={"#000000"} />
             </div>
             <div ref={this.renderRef}></div>
         </div>

@@ -1,8 +1,14 @@
 .treeline {
     position: absolute;
+    width: 100%;
 }
 
 .treeline1 {
     bottom: 0;
     background-color: red;
+}
+
+.ground {
+    width: 100%;
+    height:55px;
 }

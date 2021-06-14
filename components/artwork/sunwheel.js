@@ -9,6 +9,7 @@ class Sunwheel extends Component {
         this.maxTime = this.props.maxTime
         this.state = {
             sunwheelRotation: null,
+            transitionTime: this.getTickRateToSeconds(),
             computedTime: this.props.computedTime
         }
     }
@@ -20,7 +21,14 @@ class Sunwheel extends Component {
     }
 
     tick() {
-        this.setState({sunwheelRotation:this.getAbsoluteSunwheelRotation()})
+        let rotation = this.getAbsoluteSunwheelRotation()
+        if (rotation >= 360) {
+            rotation = 0
+            this.setState({transitionTime: 0})
+        } else if (this.state.transitionTime == 0) {
+            this.setState({transitionTime: this.getTickRateToSeconds()})
+        }
+        this.setState({sunwheelRotation:rotation})
     }
 
     getTickRateToSeconds() {
@@ -51,7 +59,7 @@ class Sunwheel extends Component {
     render() {
         console.log("Rendering Sunwheel")
         return (
-        <div className={styles.sunWheel} style={{transform: "rotate("+this.state.sunwheelRotation+"deg)"}}>
+        <div className={styles.sunWheel} style={{transition: "linear "+this.state.transitionTime+"s", transform: "rotate("+this.state.sunwheelRotation+"deg)"}}>
             <div className={styles.sun}></div>
             <div className={styles.moon}></div>
         </div>

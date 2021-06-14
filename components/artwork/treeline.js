@@ -37,6 +37,7 @@ class Treeline extends Component {
         return (
         <div className={styles.treeline} style={{bottom: this.rowPosition + "px"}} >
             {/* <Tree hue={this.state.hue} treeSize={this.treeSize} offset={0}/> */}
+            <div className={styles.ground} style={{backgroundColor: this.state.hue}}></div>
             {this.state.trees}
         </div>
         );
