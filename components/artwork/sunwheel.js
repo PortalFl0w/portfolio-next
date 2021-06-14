@@ -57,7 +57,6 @@ class Sunwheel extends Component {
     }
 
     render() {
-        console.log("Rendering Sunwheel")
         return (
         <div className={styles.sunWheel} style={{transition: "linear "+this.state.transitionTime+"s", transform: "rotate("+this.state.sunwheelRotation+"deg)"}}>
             <div className={styles.sun}></div>

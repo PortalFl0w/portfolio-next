@@ -22,10 +22,10 @@
 .contentBox {
     background-color: #eee;
     padding: 5vh;
-    /* padding-bottom: 1000px; */
     border-radius: 25px;
     width: 100%;
     max-width: 50vw;
+    max-height: 70vh;
 }
 
 .innerRow {
@@ -36,11 +36,6 @@
 .innerColumn {
     display: flex;
     flex-flow: column;
+    flex-grow: 1;
     margin: 10px;
-}
-
-.button {
-    border: 1px solid #006699;
-    border-radius: 25px;
-    padding: 10px;
 }

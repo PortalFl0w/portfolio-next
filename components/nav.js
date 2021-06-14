@@ -14,7 +14,7 @@ class Navigation extends Component {
         return (
         <div className={styles.navbar}>
             <a href="/" className={styles.navbarHome}><Image src="/logo.png" alt="ml-logo" width="48" height="48" /></a>
-            <a href="/" className={styles.navbarItem}><div className={styles.navbarItem}>Projects</div></a>
+            <a href="/projects" className={styles.navbarItem}><div>Projects</div></a>
             <a href="/about" className={styles.navbarItem}><div>About</div></a>
             {/* <a href="/" className={styles.navbarItem}><div className={styles.navbarItem}>Blog</div></a> */}
         </div>

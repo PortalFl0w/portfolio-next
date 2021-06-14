@@ -1,3 +1,7 @@
 .artworkTree {
     position:absolute;
 }
+
+.artworkTree:hover {
+    fill: red;
+}

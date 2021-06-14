@@ -3,8 +3,9 @@ import styles from '../styles/About.module.css'
 import Image from 'next/image'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
+import FullWidthButton from '../components/ui-elements/full-width-button'
 
-export default function Home() {
+export default function About() {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,14 +22,13 @@ export default function Home() {
         <div className={styles.contentColumn}>
             <div className={styles.contentBox}>
                 <h1>Hi,</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vel efficitur tellus. Fusce id ipsum ut nibh dapibus porttitor. In vitae facilisis leo, ut congue turpis. Ut viverra ante et libero maximus, vel posuere enim hendrerit. Nullam ornare at nunc at tempus. Fusce tempor gravida ligula et convallis. Fusce congue hendrerit ipsum ut feugiat.</p>
-                <h3>Buttons</h3>
+                <p>Developing with the future in mind. Always looking out for the newest tech and the next big thing in the industry. 4+ years of experience in multiple technologies and frameworks including AWS, LAMP, Odoo, Python, Magento2, Wordpress and more.</p>
                 <div className={styles.innerRow}>
                   <div className={styles.innerColumn}>
-                    <Image className={styles.button} src="/GitHub-Mark-120px-plus.png" width="50" height="50" />
+                    <FullWidthButton icon={["fab", "github"]} link="https://github.com/PortalFl0w" text="GitHub" />
                   </div>
                   <div className={styles.innerColumn}>
-                    <Image className={styles.button} src="/LI-In-Bug.png" width="60" height="50" />
+                    <FullWidthButton icon={["fab", "linkedin"]} link="https://www.linkedin.com/in/matt-l5543/" text="LinkedIn" />
                   </div>
                 </div>
             </div>

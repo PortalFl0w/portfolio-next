@@ -15,7 +15,6 @@ class Tree extends Component {
     }
 
     getVariant(variant) {
-        console.log("Choosing Tree Variant : " + variant)
         let variants = {
             1: (
                 <svg className="svgTree" viewBox="0 0 800 800" width={this.treeSize.w} height={this.treeSize.h} preserveAspectRatio="xMidYMid meet">
@@ -87,7 +86,6 @@ class Tree extends Component {
     }
 
     render() {
-        console.log("Rendering Tree")
         return (
             <div className={styles.artworkTree} style={{width: this.treeSize.w, height: this.treeSize.h, bottom: 0, left: this.state.offset}}>
                 {this.getVariant(this.variant)}

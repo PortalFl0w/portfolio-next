@@ -16,7 +16,7 @@ class Sky extends Component {
         this.renderRef = React.createRef()
         this.skyRef = React.createRef()
         this.tickRate = 1000 // Frequency of ticks in ms -- Real time is 1000
-        this.timeSpeed = 500 // Multiplier for each time step -- Real time is 1
+        this.timeSpeed = 2000 // Multiplier for each time step -- Real time is 1
         this.maxTime = 86400 // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
         this.state = {
             computedTime: null,
@@ -25,7 +25,6 @@ class Sky extends Component {
     }
 
     tick() {
-        console.log("sky tick")
         this.setState({computedTime:this.getCurrentComputedSeconds(this.timeSpeed)})
         this.setState({skyOffset:this.getAbsoluteSkyOffset()})
     }
@@ -110,7 +109,6 @@ class Sky extends Component {
     }
 
     render() {
-        console.log("Rendering Sky")
         return (
         <div>
         <div className={styles.statusBar}>
