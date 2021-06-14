@@ -6,6 +6,7 @@
     height: 100vh;
     background: #111;
     transition: 3s linear;
+    opacity: 100;
 }
 
 .loadingOverlay svg {
