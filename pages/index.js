@@ -20,18 +20,20 @@ export default function Home() {
 
       <main className={styles.main}>
         <div className={styles.about} id="about">
+          <div className={styles.contentWrapper}>
           <div className={styles.section}>
             {/* <p></p> */}
-            <p><FontAwesomeIcon icon={["fas","rocket"]} color="rgb(252,176,69)" size="1x"/>Developing across the stack, any stack.</p>
-            <p><FontAwesomeIcon icon={["fas","brain"]} color="rgb(252,176,69)" size="1x"/>5+ years of experience in tech</p>
-            <p><FontAwesomeIcon icon={["fas","code"]} color="rgb(252,176,69)" size="1x"/>JS, Python, AWS and much more</p>
+            <p><FontAwesomeIcon icon={["fas","cogs"]} color="rgb(252,176,69)" size="1x"/>Developing across the stack</p>
+            <p><FontAwesomeIcon icon={["fas","rocket"]} color="rgb(252,176,69)" size="1x"/>5+ years of experience in tech</p>
+            <p><FontAwesomeIcon icon={["fas","code"]} color="rgb(252,176,69)" size="1x"/>Node.js, React, Python and more</p>
             <p><FontAwesomeIcon icon={["fas","heart"]} color="rgb(252,176,69)" size="1x"/>Arrays start at 0</p>
           </div>
           <div className={styles.section}>
-              <span>Buttons and Stuff...</span>
               <FullWidthButton icon={["fab", "github"]} link="https://github.com/PortalFl0w" text="GitHub" />
               <FullWidthButton icon={["fab", "linkedin"]} link="https://www.linkedin.com/in/matt-l5543/" text="LinkedIn" />
+              <FullWidthButton icon={["fas", "envelope"]} link="mailto:me@mattlipski.com" text="Email Me" />
           </div> 
+          </div>
         </div>
 
         {/* <p className={styles.description}>

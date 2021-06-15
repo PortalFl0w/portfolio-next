@@ -9,10 +9,16 @@
   background-color: #0a0a0a;
   display: flex;
   align-items: center;
-  justify-content: left;
+  justify-content: center;
 }
 
-.about svg {
+.contentWrapper {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+}
+
+.about p svg {
   width: 30px;
   height: auto;
   margin-right: 10px;
@@ -21,9 +27,9 @@
 .about p {
   margin: 0;
   font-size: 36px;
-  
 }
 
 .section {
   padding: 20px;
+  
 }
