@@ -10,7 +10,7 @@ class Treeline extends Component {
         this.initialOffset = this.props.initialOffset
         this.density = 3
         this.scale = this.props.scale
-        this.treeSize = {w: 250, h: 250 * this.scale}
+        this.treeSize = {w: 250, h: 275 * this.scale}
         this.state = {
             trees: [],
             hue: this.props.hue || "#000000"

@@ -5,16 +5,20 @@
     align-items: center;
     justify-content: center;
     transition: .2s;
+    background: #eee;
+    color: #111;
+    margin-bottom: 5px;
 }
 
 .fullWidthButton:hover {
-    background: #ddd;
+    background: #ccc;
     cursor: pointer;
 }
 
 .fullWidthButton svg {
     padding: 10px;
     width: 20%;
+    max-height: 100%;
 }
 
 .fullWidthButton span {

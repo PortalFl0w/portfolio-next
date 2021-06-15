@@ -1,8 +1,9 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import FullWidthButton from '../components/ui-elements/full-width-button'
 
 export default function Home() {
   return (
@@ -13,17 +14,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Artwork />
-
       <Navigation />
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          
-        </h1>
+      <Artwork />
 
-        <p className={styles.description}>
-        </p>
+      <main className={styles.main}>
+        <div className={styles.about} id="about">
+          <div className={styles.section}>
+            {/* <p></p> */}
+            <p><FontAwesomeIcon icon={["fas","rocket"]} color="rgb(252,176,69)" size="1x"/>Developing across the stack, any stack.</p>
+            <p><FontAwesomeIcon icon={["fas","brain"]} color="rgb(252,176,69)" size="1x"/>5+ years of experience in tech</p>
+            <p><FontAwesomeIcon icon={["fas","code"]} color="rgb(252,176,69)" size="1x"/>JS, Python, AWS and much more</p>
+            <p><FontAwesomeIcon icon={["fas","heart"]} color="rgb(252,176,69)" size="1x"/>Arrays start at 0</p>
+          </div>
+          <div className={styles.section}>
+              <span>Buttons and Stuff...</span>
+              <FullWidthButton icon={["fab", "github"]} link="https://github.com/PortalFl0w" text="GitHub" />
+              <FullWidthButton icon={["fab", "linkedin"]} link="https://www.linkedin.com/in/matt-l5543/" text="LinkedIn" />
+          </div> 
+        </div>
 
         {/* <p className={styles.description}>
           Get started by editing{' '}

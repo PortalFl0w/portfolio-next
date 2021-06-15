@@ -22,7 +22,7 @@ export default function About() {
         <div className={styles.contentColumn}>
             <div className={styles.contentBox}>
                 <h1>Hi,</h1>
-                <p>Developing with the future in mind. Always looking out for the newest tech and the next big thing in the industry. 4+ years of experience in multiple technologies and frameworks including AWS, LAMP, Odoo, Python, Magento2, Wordpress and more.</p>
+                <p>Developing with the future in mind. 4+ years of experience in much tech</p>
                 <div className={styles.innerRow}>
                   <div className={styles.innerColumn}>
                     <FullWidthButton icon={["fab", "github"]} link="https://github.com/PortalFl0w" text="GitHub" />
