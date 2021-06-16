@@ -15,7 +15,7 @@ class Navigation extends Component {
         return (
         <div className={styles.navbar}>
             <a href="/" className={styles.navbarHome}><Image src="/logo.png" alt="ml-logo" width="48" height="48" /></a>
-            {/* <AnchorLink href="#projects" className={styles.navbarItem}>Projects</AnchorLink> */}
+            <AnchorLink href="#projects" className={styles.navbarItem}>Projects</AnchorLink>
             <AnchorLink href="#about" className={styles.navbarItem}>About</AnchorLink>
             {/* <AnchorLink href="#contact" className={styles.navbarItem}>Contact</AnchorLink> */}
             {/* <a href="#projects" className={styles.navbarItem}><div>Projects</div></a>

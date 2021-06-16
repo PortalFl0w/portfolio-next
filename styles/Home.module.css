@@ -2,20 +2,39 @@
   display:block;
 }
 
-.about {
-  color: #eee;
+.homeFullSection {
   min-height: 100vh;
   padding: 20px;
   background-color: #0a0a0a;
+  color: #eee;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+}
+
+.sectionHeader {
+  text-align: center;
+  font-size: 30px;
+  flex-basis: 100%;
+  
+}
+
+.sectionHeader h2 {
+  border-bottom: 3px solid #FCB045;
+  display: inline-block;
+  margin: 0;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  font-weight: normal;
 }
 
 .contentWrapper {
   max-width: 1200px;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
 }
 
 .about p svg {
@@ -31,5 +50,4 @@
 
 .section {
   padding: 20px;
-  
 }

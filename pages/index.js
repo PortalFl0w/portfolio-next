@@ -3,7 +3,9 @@ import styles from '../styles/Home.module.css'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// ui elements
 import FullWidthButton from '../components/ui-elements/full-width-button'
+import ProjectGridBox from '../components/ui-elements/project-grid-box'
 
 export default function Home() {
   return (
@@ -19,7 +21,17 @@ export default function Home() {
       <Artwork />
 
       <main className={styles.main}>
-        <div className={styles.about} id="about">
+        <div id="projects" className={styles.projects + " " + styles.homeFullSection}>
+          <div className={styles.sectionHeader}>
+          <h2>Projects</h2>
+          </div>
+          <div className={styles.contentWrapper}>
+            <ProjectGridBox imageUrl="/before-2.png" text="This Website" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/geckota.png" text="Geckota" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/porsche.jpg" text="Hobby Stuff" link="/projects/this-site" />
+          </div>
+        </div>
+        <div className={styles.about+" "+styles.homeFullSection} id="about">
           <div className={styles.contentWrapper}>
           <div className={styles.section}>
             {/* <p></p> */}

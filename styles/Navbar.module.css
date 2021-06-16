@@ -11,6 +11,7 @@
     border-radius: 25px;
     background: #111;
     height: 48px;
+    z-index: 99;
 }
 
 .navbarItem {
@@ -21,6 +22,11 @@
     margin: 0 10px 0 10px;
     color: #eee;
     font-weight:bold;
+}
+
+.navbarItem:hover {
+    border-bottom: 2px solid #FCB045;
+    color: #fff;
 }
 
 .navbarHome {

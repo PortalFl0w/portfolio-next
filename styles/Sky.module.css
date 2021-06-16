@@ -30,4 +30,5 @@
 
 .statusElement svg {
     min-width: 20px;
+    max-height: 20px;
 }
