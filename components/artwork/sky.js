@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import styles from '../../styles/Sky.module.css'
 import Sunwheel from './sunwheel'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { connect } from 'react-redux'
 
 // Day Night Cycle notes
 // Color gradient to pick background color from depending on time of day
@@ -16,7 +17,7 @@ class Sky extends Component {
         this.renderRef = React.createRef()
         this.skyRef = React.createRef()
         this.tickRate = 1000 // Frequency of ticks in ms -- Real time is 1000
-        this.timeSpeed = 1 // Multiplier for each time step -- Real time is 1
+        this.timeSpeed = 1000 // Multiplier for each time step -- Real time is 1
         this.maxTime = 86400 // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
         this.state = {
             computedTime: null,
@@ -25,6 +26,7 @@ class Sky extends Component {
     }
 
     tick() {
+        this.props.dispatch({type: "time", "payload": this.getCurrentComputedSeconds(this.timeSpeed)})
         this.setState({computedTime:this.getCurrentComputedSeconds(this.timeSpeed)})
         this.setState({skyOffset:this.getAbsoluteSkyOffset()})
     }
@@ -37,7 +39,7 @@ class Sky extends Component {
         let today = new Date()
         today.setHours(0)
         today.setMinutes(0)
-        today.setSeconds(this.state.computedTime)
+        today.setSeconds(this.props.time)
 
         let isAM = null
         let hours = today.getHours()
@@ -45,14 +47,6 @@ class Sky extends Component {
 
         if (minutes < 10) {
             minutes = "0" + minutes
-        }
-
-        if (hours == 0) {
-            isAM = true
-        } else if (hours > 12) {
-            isAM = false
-        } else {
-            isAM = true
         }
 
         return hours + ":" + minutes
@@ -125,4 +119,4 @@ class Sky extends Component {
     }
 }
     
-export default Sky;
+export default connect(state => state)(Sky);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styles from '../../styles/ui-elements/ProjectGridBox.module.css'
 import Image from 'next/image'
+// import { time } from '../stores/clock'
+
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class ProjectGridBox extends Component {
@@ -15,7 +17,9 @@ class ProjectGridBox extends Component {
                 {/* <Image src={this.props.imageUrl} width="300px" height="225px"/> */}
                 <div className={styles.projectCover} style={{backgroundImage:"url("+this.props.imageUrl+")"}}></div>
                 {/* <FontAwesomeIcon icon={this.props.icon} color={this.props.iconColor} size="1x"/> */}
-                <div className={styles.projectName}>{this.props.text}</div>
+                <div className={styles.projectName}>
+                    {this.props.text}
+                </div>
             </div>
         </a>
         );

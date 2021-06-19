@@ -27,8 +27,11 @@ export default function Home() {
           </div>
           <div className={styles.contentWrapper}>
             <ProjectGridBox imageUrl="/before-2.png" text="This Website" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/odoo.png" text="Odoo" link="/projects/this-site" />
             <ProjectGridBox imageUrl="/geckota.png" text="Geckota" link="/projects/this-site" />
             <ProjectGridBox imageUrl="/porsche.jpg" text="Hobby Stuff" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/temp-coming-soon.png" text="Coming Soon" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/temp-coming-soon.png" text="Coming Soon" link="/projects/this-site" />
           </div>
         </div>
         <div className={styles.about+" "+styles.homeFullSection} id="about">

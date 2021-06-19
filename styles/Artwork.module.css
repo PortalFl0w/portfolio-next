@@ -10,3 +10,27 @@
     width: 100%;
     z-index: -1;
 }
+
+.mountain {
+    position: absolute;
+    background-position: right center;
+    background-size: cover;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+}
+
+.mountainFront {
+    height: 150px;
+    background-image: url("/mountains-front.svg");
+}
+
+.mountainBack {
+    height: 250px;
+    background-image: url("/mountains-back.svg");
+}
+
+.mountain img {
+    min-width: 800px;
+    width: 100%;
+}
