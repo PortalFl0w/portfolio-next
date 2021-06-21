@@ -11,33 +11,38 @@ class Treeline extends Component {
         this.density = 3
         this.scale = this.props.scale
         this.treeSize = {w: 250, h: 275 * this.scale}
-        this.state = {
-            trees: [],
-            hue: this.props.hue || "#000000"
-        }
+        this.trees = []
     }
 
-    generateTrees() {
+    generateTreeBoundaries() {
+        // window.innerWidth
         let numberOfTrees = Math.floor(window.innerWidth / (this.treeSize.w / this.density)) + 4
         let ongoingOffset = -this.initialOffset
         let tempTrees = []
         for (let i = 0; i < numberOfTrees; i++) {
-            tempTrees.push(<Tree key={i} hue={this.state.hue} treeSize={this.treeSize} offset={ongoingOffset} />)
+            tempTrees.push({index: i, offset: ongoingOffset})
             ongoingOffset += this.treeSize.w / this.density
         }
-        this.setState({trees:tempTrees})
+        return tempTrees
+    }
+
+    updateTreeHue() {
+        if (this.trees.length > 0) {
+            this.trees.forEach((r) => {
+                r
+            })
+        }
     }
 
     componentDidMount() {
-        this.generateTrees()
+        this.trees = this.generateTreeBoundaries()
     }
 
     render() {
         return (
         <div className={styles.treeline} style={{bottom: this.rowPosition + "px"}} >
-            {/* <Tree hue={this.state.hue} treeSize={this.treeSize} offset={0}/> */}
-            <div className={styles.ground} style={{backgroundColor: this.state.hue}}></div>
-            {this.state.trees}
+            <div className={styles.ground} style={{backgroundColor: this.props.hue}}></div>
+            {this.trees.map((t) => {return <Tree key={t.index} hue={this.props.hue} treeSize={this.treeSize} offset={t.offset} />})}
         </div>
         );
     }

@@ -8,8 +8,8 @@ const reducer = (state = {tick: 'init'}, action) => {
             return {...state, ...action.payload}
         case 'TICK':
             return {...state, tick: action.payload}
-        case 'time':
-            return {...state, time: action.payload}
+        case 'GLOBAL_TIME':
+            return {...state, globalTime: action.payload}
         default:
             return state
     }

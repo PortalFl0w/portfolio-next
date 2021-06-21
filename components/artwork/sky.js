@@ -26,7 +26,7 @@ class Sky extends Component {
     }
 
     tick() {
-        this.props.dispatch({type: "time", "payload": this.getCurrentComputedSeconds(this.timeSpeed)})
+        this.props.dispatch({type: "GLOBAL_TIME", "payload": this.getCurrentComputedSeconds(this.timeSpeed)})
         this.setState({computedTime:this.getCurrentComputedSeconds(this.timeSpeed)})
         this.setState({skyOffset:this.getAbsoluteSkyOffset()})
     }
@@ -39,7 +39,7 @@ class Sky extends Component {
         let today = new Date()
         today.setHours(0)
         today.setMinutes(0)
-        today.setSeconds(this.props.time)
+        today.setSeconds(this.props.globalTime)
 
         let isAM = null
         let hours = today.getHours()

@@ -21,12 +21,12 @@
 }
 
 .mountainFront {
-    height: 150px;
+    min-height: 150px;
     background-image: url("/mountains-front.svg");
 }
 
 .mountainBack {
-    height: 250px;
+    min-height: 250px;
     background-image: url("/mountains-back.svg");
 }
 

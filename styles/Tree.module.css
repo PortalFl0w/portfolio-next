@@ -1,3 +1,7 @@
 .artworkTree {
     position:absolute;
 }
+
+.artworkTree svg path, .artworkTree svg rect {
+    transition: 5s;
+}
