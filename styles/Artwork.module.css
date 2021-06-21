@@ -13,8 +13,9 @@
 
 .mountain {
     position: absolute;
-    background-position: right center;
-    background-size: cover;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 100%;
     bottom: 0;
     right: 0;
@@ -26,7 +27,7 @@
 }
 
 .mountainBack {
-    min-height: 250px;
+    min-height: 300px;
     background-image: url("/mountains-back.svg");
 }
 

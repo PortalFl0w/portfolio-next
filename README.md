@@ -18,3 +18,12 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - Night/Day cycle on artwork
 - Weather system integrated into artwork, make it rain!
 - CMS integration for content and blog
+
+
+## Current TODO / Reminders
+
+- Clean up clock functionality, make sure everything uses the global clock directly.
+- Project Pages
+- Cleanup unused modules
+- Make it run faster! - Clean up render calls etc.
+- Put variables like tickRate into the global store at getStaticProps time

@@ -26,8 +26,6 @@ class Sky extends Component {
     }
 
     tick() {
-        this.props.dispatch({type: "GLOBAL_TIME", "payload": this.getCurrentComputedSeconds(this.timeSpeed)})
-        this.setState({computedTime:this.getCurrentComputedSeconds(this.timeSpeed)})
         this.setState({skyOffset:this.getAbsoluteSkyOffset()})
     }
 
@@ -56,7 +54,7 @@ class Sky extends Component {
         // Get the absolute offset in pixels for the sky element.
         // Calculated depending on current computedTime state.
         // it will need to reach maxOffset at oscillationTime.
-        let time = this.state.computedTime
+        let time = this.props.globalTime
         let maxOffset = this.skyRef.current.offsetHeight - window.innerHeight
         let maxTime = this.maxTime
         let oscillationTime = maxTime / 2 // Mid Day.
@@ -73,24 +71,7 @@ class Sky extends Component {
         return -Math.floor(offset)
     }
 
-    getCurrentDaySeconds() {
-        let date = new Date()
-        let seconds = date.getSeconds() + (60 * date.getMinutes()) + (60 * 60 * date.getHours())
-        return seconds
-    }
-
-    getCurrentComputedSeconds(multiplier) {
-        if (this.state.computedTime == null) {
-            return this.getCurrentDaySeconds()
-        }
-        if (this.state.computedTime >= this.maxTime){
-            return 0
-        }
-        return this.state.computedTime + (1 * multiplier)
-    }
-
     componentDidMount() {
-        this.setState({computedTime:this.getCurrentComputedSeconds()})
         // Interval for tickrate
         const timeInterval = setInterval(() => this.tick(), this.tickRate)
         this.setState({timeInterval})
@@ -113,7 +94,7 @@ class Sky extends Component {
         </div>
         <div className={styles.skyContainer} style={{transition: "linear " + this.getTickRateToSeconds() + "s", top: this.state.skyOffset + "px"}} ref={this.skyRef}>
         </div>
-        <Sunwheel computedTime={this.state.computedTime} maxTime={this.maxTime} tickRate={this.tickRate}/>
+        <Sunwheel computedTime={this.props.globalTime} maxTime={this.maxTime} tickRate={this.tickRate}/>
         </div>
         );
     }

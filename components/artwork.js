@@ -36,17 +36,15 @@ class Artwork extends Component {
         normalTime = (time) / (maxTime)
 
         let colors = [
-            {percent: 0,  color: [37,50,63]},
+            {percent: 0,  color: [100,100,100]},
             {percent: 0.2,  color: [131,58,180]},
             {percent: 0.25,  color: [253,29,29]},
             {percent: 0.325,  color: [252,176,69]},
-            {percent: 0.4,  color: [0,186,255]},
-            {percent: 0.5, color: [0, 186, 255]},
-            {percent: 0.6,  color: [0,186,255]},
+            {percent: 0.6,  color: [0,110,51]},
             {percent: 0.675,  color: [252,176,69]},
             {percent: 0.75,  color: [253,29,29]},
             {percent: 0.8,  color: [131,58,180]},
-            {percent: 1,  color: [37,50,63]},
+            {percent: 1,  color: [100,100,100]},
         ]
 
         let hue = colors.find(o => o.percent >= normalTime)
