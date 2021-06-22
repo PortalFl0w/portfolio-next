@@ -22,13 +22,18 @@
 }
 
 .mountainFront {
-    min-height: 150px;
-    background-image: url("/mountains-front.svg");
+    min-height: 275px;
+    background-image: url("/mountain-front-center.svg");
 }
 
 .mountainBack {
     min-height: 300px;
     background-image: url("/mountains-back.svg");
+}
+
+.mountainFar {
+    min-height: 325px;
+    background-image: url("/mountain-volcano.svg");
 }
 
 .mountain img {

@@ -70,6 +70,7 @@ class Artwork extends Component {
         <div className={styles.artwork}>
             <Sky />
             <div className={styles.treelines}>
+                <div className={styles.mountain + " " + styles.mountainFar}></div>
                 <div className={styles.mountain + " " + styles.mountainBack}></div>
                 <Treeline position={80} scale={0.5} initialOffset={110} hue={this.getHueRGBString(0.3)} />
                 <Treeline position={60} scale={0.6} initialOffset={60} hue={this.getHueRGBString(0.2)} />

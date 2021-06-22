@@ -34,9 +34,10 @@
     flex-flow: row;
     vertical-align: middle;
     transition: .2s;
+    padding-left: 2px;
 }
 
 .navbarHome:hover {
-    transform: scale(1.2);
+    transform: scale(0.95);
     transition: .2s;
 }

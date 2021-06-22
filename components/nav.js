@@ -14,7 +14,7 @@ class Navigation extends Component {
     render() {
         return (
         <div className={styles.navbar}>
-            <a href="/" className={styles.navbarHome}><Image src="/logo.png" alt="ml-logo" width="48" height="48" /></a>
+            <a href="/" className={styles.navbarHome}><Image src="/ml-logo-white.png" alt="ml-logo" width="44" height="44" /></a>
             <AnchorLink href="#projects" className={styles.navbarItem}>Projects</AnchorLink>
             <AnchorLink href="#about" className={styles.navbarItem}>About</AnchorLink>
             {/* <AnchorLink href="#contact" className={styles.navbarItem}>Contact</AnchorLink> */}
