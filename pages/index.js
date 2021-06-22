@@ -2,7 +2,8 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Footer from '../components/ui-elements/footer'
+import Icon from '../components/ui-elements/icon'
 // ui elements
 import FullWidthButton from '../components/ui-elements/full-width-button'
 import ProjectGridBox from '../components/ui-elements/project-grid-box'
@@ -23,35 +24,36 @@ export default function Home() {
 
       <Artwork />
 
-      <main className={styles.main}>
+      <main className="main">
         <div id="projects" className={styles.projects + " " + styles.homeFullSection}>
           <div className={styles.sectionHeader}>
           <h2>Projects</h2>
           </div>
           <div className={styles.contentWrapper}>
             <ProjectGridBox imageUrl="/before-2.png" text="This Website" link="/projects/this-site" />
-            <ProjectGridBox imageUrl="/odoo.png" text="Odoo" link="/projects/this-site" />
-            <ProjectGridBox imageUrl="/geckota.png" text="Geckota" link="/projects/this-site" />
-            <ProjectGridBox imageUrl="/porsche.jpg" text="Hobby Stuff" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/odoo.png" text="Odoo" link="/projects/odoo" />
+            <ProjectGridBox imageUrl="/geckota.png" text="Geckota" link="/projects/geckota" />
+            {/* <ProjectGridBox imageUrl="/porsche.jpg" text="Hobby Stuff" link="/projects/this-site" />
             <ProjectGridBox imageUrl="/temp-coming-soon.png" text="Coming Soon" link="/projects/this-site" />
-            <ProjectGridBox imageUrl="/temp-coming-soon.png" text="Coming Soon" link="/projects/this-site" />
+            <ProjectGridBox imageUrl="/temp-coming-soon.png" text="Coming Soon" link="/projects/this-site" /> */}
           </div>
         </div>
         <div className={styles.about+" "+styles.homeFullSection} id="about">
           <div className={styles.contentWrapper}>
           <div className={styles.section}>
-            <p><FontAwesomeIcon icon={["fas","cogs"]} color="rgb(252,176,69)" size="1x"/>Developing across the stack</p>
-            <p><FontAwesomeIcon icon={["fas","rocket"]} color="rgb(252,176,69)" size="1x"/>5+ years of experience in tech</p>
-            <p><FontAwesomeIcon icon={["fas","code"]} color="rgb(252,176,69)" size="1x"/>Node.js, React, Python and more</p>
-            <p><FontAwesomeIcon icon={["fas","heart"]} color="rgb(252,176,69)" size="1x"/>Arrays start at 0</p>
+            <p><Icon icon="cog" color="rgb(252,176,69)"/>Developing across the stack</p>
+            <p><Icon icon="light-bulb" color="rgb(252,176,69)"/>5+ years of experience in tech</p>
+            <p><Icon icon="code" color="rgb(252,176,69)"/>Node.js, React, Python and more</p>
+            <p><Icon icon="heart" color="rgb(252,176,69)"/>Arrays start at 0</p>
           </div>
           <div className={styles.section}>
-              <FullWidthButton icon={["fab", "github"]} link="https://github.com/PortalFl0w" text="GitHub" />
-              <FullWidthButton icon={["fab", "linkedin"]} link="https://www.linkedin.com/in/matt-l5543/" text="LinkedIn" />
-              <FullWidthButton icon={["fas", "envelope"]} link="mailto:me@mattlipski.com" text="Email Me" />
+              <FullWidthButton icon="github" link="https://github.com/PortalFl0w" text="GitHub" />
+              <FullWidthButton icon="linkedin" link="https://www.linkedin.com/in/matt-l5543/" text="LinkedIn" />
+              <FullWidthButton icon="mail" link="mailto:me@mattlipski.com" text="Email Me" />
           </div> 
           </div>
         </div>
+        <Footer />
       </main>
     </div>
   )

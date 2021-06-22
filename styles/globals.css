@@ -16,6 +16,17 @@ a {
   box-sizing: border-box;
 }
 
+.main {
+  display:block;
+  padding-top: 80px;
+  background-color: #0a0a0a;
+  color: #eee;
+}
+
+.main.lighter {
+  background-color: #111;
+}
+
 /* SCROLLBAR STYLE */
 
 body::-webkit-scrollbar {

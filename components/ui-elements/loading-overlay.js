@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import styles from '../../styles/ui-elements/LoadingOverlay.module.css'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 class LoadingOverlay extends Component {
     constructor(props) {
@@ -17,7 +16,7 @@ class LoadingOverlay extends Component {
 
     render() {
         return (
-            <div className={styles.loadingOverlay} style={{opacity: this.state.loaded ? 0 : 100}}><FontAwesomeIcon icon={["fas", "fan"]} color="#eee" size="1x"/></div>
+            <div className={styles.loadingOverlay} style={{opacity: this.state.loaded ? 0 : 100}}>|</div>
         );
     }
 }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../../styles/Sky.module.css'
 import Sunwheel from './sunwheel'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import Icon from '../ui-elements/icon'
 import { connect } from 'react-redux'
 
 // Day Night Cycle notes
@@ -89,7 +89,7 @@ class Sky extends Component {
         <div className={styles.statusBar}>
             <div className={styles.statusElement}>{this.getComputedTimeToTimeString()}</div>
             <div className={styles.statusElement}>{" | "}</div>
-            <div className={styles.statusElement}><FontAwesomeIcon icon={["far", "sun"]} color="#FCB045" size="10x"/></div>
+            <div className={styles.statusElement}><Icon icon="sun" color="#FCB045" /></div>
             <div className={styles.statusElement}>Clear</div>
         </div>
         <div className={styles.skyContainer} style={{transition: "linear " + this.getTickRateToSeconds() + "s", top: this.state.skyOffset + "px"}} ref={this.skyRef}>
