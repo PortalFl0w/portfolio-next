@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import { wrapper } from '../components/store'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
 import Footer from '../components/ui-elements/footer'
@@ -9,7 +10,7 @@ import FullWidthButton from '../components/ui-elements/full-width-button'
 import ProjectGridBox from '../components/ui-elements/project-grid-box'
 import Clock from '../components/clock'
 
-export default function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <Head>
@@ -58,3 +59,12 @@ export default function Home() {
     </div>
   )
 }
+
+Home.getInitialProps = wrapper.getInitialPageProps(store => ({pathname, req, res}) => {
+  console.log('2. Setting up home global variables');
+  store.dispatch({type: 'TIME_SPEED', payload: 1000});
+  store.dispatch({type: 'MAX_TIME', payload: 86400});
+  store.dispatch({type: 'TICK_RATE', payload: 1000});
+});
+
+export default Home
