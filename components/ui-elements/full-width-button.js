@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styles from '../../styles/ui-elements/FullWidthButton.module.css'
-import Icon from './icon'
+import Icon from '../icons/icon'
 
 
 class FullWidthButton extends Component {

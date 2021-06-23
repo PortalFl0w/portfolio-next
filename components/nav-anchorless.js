@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Image from 'next/image'
+import Logo from './ui-elements/logo'
 import styles from '../styles/Navbar.module.css'
 
 class Navigation extends Component {
@@ -13,7 +13,7 @@ class Navigation extends Component {
     render() {
         return (
         <div className={styles.navbar}>
-            <a href="/" className={styles.navbarHome}><Image src="/logo.png" alt="ml-logo" width="48" height="48" /></a>
+            <a href="/" className={styles.navbarHome}><Logo width="44" height="44"/></a>
         </div>
         );
     }

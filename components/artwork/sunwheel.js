@@ -1,23 +1,17 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import styles from '../../styles/Sunwheel.module.css'
 
 class Sunwheel extends Component {
     constructor(props) {
         super(props)
         this.wheelRef = React.createRef()
-        this.tickRate = this.props.tickRate
-        this.maxTime = this.props.maxTime
+        this.tickRate = this.props.globalTickRate
+        this.maxTime = this.props.globalMaxTime
         this.state = {
             sunwheelRotation: null,
-            transitionTime: this.getTickRateToSeconds(),
-            computedTime: this.props.computedTime
+            transitionTime: this.getTickRateToSeconds()
         }
-    }
-
-    static getDerivedStateFromProps(nextProps, prevState) {
-        return {
-            computedTime: nextProps.computedTime,
-        };
     }
 
     tick() {
@@ -36,7 +30,7 @@ class Sunwheel extends Component {
     }
 
     getAbsoluteSunwheelRotation() {
-        let time = this.state.computedTime
+        let time = this.props.globalTime
         let maxRotation = 360
         let maxTime = this.maxTime
         let step = maxRotation / maxTime
@@ -66,4 +60,4 @@ class Sunwheel extends Component {
     }
 }
     
-export default Sunwheel;
+export default connect(state => state)(Sunwheel);

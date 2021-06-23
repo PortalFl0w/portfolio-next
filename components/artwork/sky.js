@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import styles from '../../styles/Sky.module.css'
 import Sunwheel from './sunwheel'
-import Icon from '../ui-elements/icon'
+import Icon from '../icons/icon'
 import { connect } from 'react-redux'
 
 // Day Night Cycle notes
@@ -16,11 +16,9 @@ class Sky extends Component {
         super(props)
         this.renderRef = React.createRef()
         this.skyRef = React.createRef()
-        this.tickRate = 1000 // Frequency of ticks in ms -- Real time is 1000
-        this.timeSpeed = 1000 // Multiplier for each time step -- Real time is 1
-        this.maxTime = 86400 // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
+        this.tickRate = this.props.globalTickRate // Frequency of ticks in ms -- Real time is 1000
+        this.maxTime = this.props.globalMaxTime // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
         this.state = {
-            computedTime: null,
             skyOffset: null
         }
     }
@@ -33,13 +31,11 @@ class Sky extends Component {
         return this.tickRate / 1000
     }
 
-    getComputedTimeToTimeString() {
+    getGlobalTimeToString() {
         let today = new Date()
         today.setHours(0)
         today.setMinutes(0)
         today.setSeconds(this.props.globalTime)
-
-        let isAM = null
         let hours = today.getHours()
         let minutes = today.getMinutes()
 
@@ -52,7 +48,7 @@ class Sky extends Component {
 
     getAbsoluteSkyOffset() {
         // Get the absolute offset in pixels for the sky element.
-        // Calculated depending on current computedTime state.
+        // Calculated depending on current globalTime state.
         // it will need to reach maxOffset at oscillationTime.
         let time = this.props.globalTime
         let maxOffset = this.skyRef.current.offsetHeight - window.innerHeight
@@ -87,14 +83,14 @@ class Sky extends Component {
         return (
         <div>
         <div className={styles.statusBar}>
-            <div className={styles.statusElement}>{this.getComputedTimeToTimeString()}</div>
+            <div className={styles.statusElement}>{this.getGlobalTimeToString()}</div>
             <div className={styles.statusElement}>{" | "}</div>
             <div className={styles.statusElement}><Icon icon="sun" color="#FCB045" /></div>
             <div className={styles.statusElement}>Clear</div>
         </div>
         <div className={styles.skyContainer} style={{transition: "linear " + this.getTickRateToSeconds() + "s", top: this.state.skyOffset + "px"}} ref={this.skyRef}>
         </div>
-        <Sunwheel computedTime={this.props.globalTime} maxTime={this.maxTime} tickRate={this.tickRate}/>
+        <Sunwheel />
         </div>
         );
     }

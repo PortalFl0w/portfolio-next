@@ -4,9 +4,9 @@ import { connect } from 'react-redux'
 class Clock extends Component {
     constructor(props) {
         super(props)
-        this.tickRate = 1000 // Frequency of ticks in ms -- Real time is 1000
-        this.timeSpeed = 1000 // Multiplier for each time step -- Real time is 1
-        this.maxTime = 86400 // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
+        this.tickRate = this.props.globalTickRate // Frequency of ticks in ms -- Real time is 1000
+        this.timeSpeed = this.props.globalTimeSpeed // Multiplier for each time step -- Real time is 1
+        this.maxTime = this.props.globalMaxTime // Maximum time per artwork loop in seconds -- Keep to 86400 for real time
     }
 
     tick() {

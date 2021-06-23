@@ -3,7 +3,6 @@
     top: 0;
     left: 0;
     margin: 15px;
-    padding-right: 15px;
     width: auto;
     display: flex;
     justify-content: left;
@@ -19,7 +18,7 @@
     display: inline-flex;
     flex-flow: row;
     vertical-align: middle;
-    margin: 0 10px 0 10px;
+    margin-left: 15px;
     color: #eee;
     font-weight:bold;
 }
@@ -27,6 +26,10 @@
 .navbarItem:hover {
     border-bottom: 2px solid #FCB045;
     color: #fff;
+}
+
+.navbarItem:last-of-type {
+    margin-right: 20px;
 }
 
 .navbarHome {
@@ -38,6 +41,5 @@
 }
 
 .navbarHome:hover {
-    transform: scale(0.95);
     transition: .2s;
 }

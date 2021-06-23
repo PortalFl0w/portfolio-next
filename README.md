@@ -22,8 +22,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Current TODO / Reminders
 
-- Clean up clock functionality, make sure everything uses the global clock directly.
-- Project Pages
-- Cleanup unused modules
+General:
 - Make it run faster! - Clean up render calls etc.
-- Put variables like tickRate into the global store at getStaticProps time
+- Controls for time/weather
+- Events system, display stuff depending on time/weather etc.
+
+Looks:
+- Mobile styling
+- Styling tweaks / Improvements
+- Campfire on artwork
+- Improved Mountains
+- Better footer
+- Check content
+
+Weather:
+- Weather/Location API connection
+- Weather canvas overlay

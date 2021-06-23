@@ -3,7 +3,7 @@ import styles from '../styles/Home.module.css'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
 import Footer from '../components/ui-elements/footer'
-import Icon from '../components/ui-elements/icon'
+import Icon from '../components/icons/icon'
 // ui elements
 import FullWidthButton from '../components/ui-elements/full-width-button'
 import ProjectGridBox from '../components/ui-elements/project-grid-box'

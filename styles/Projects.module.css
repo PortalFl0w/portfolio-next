@@ -37,3 +37,8 @@
 .links a:hover {
     background: #FCB045;
 }
+
+.flexDivider {
+    flex-basis: 100%;
+    height: 0;
+}

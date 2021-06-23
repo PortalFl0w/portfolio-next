@@ -20,8 +20,8 @@ export default function Projects() {
           <div className={styles.projectWrapper}>
           <div className={styles.projectCover}>
             <Image src="/before-2.png" layout={'fill'} objectFit="cover" />
-
           </div>
+          <div class={styles.flexDivider}></div>
           <div className={styles.projectDescription}>
           <h1>About This Website</h1>
             <div className={styles.keyIdeas}>

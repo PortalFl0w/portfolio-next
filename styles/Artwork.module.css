@@ -22,8 +22,19 @@
 }
 
 .mountainFront {
-    min-height: 275px;
-    background-image: url("/mountain-front-center.svg");
+    position: absolute;
+}
+
+.mountainFront svg {
+    max-width: 100%;
+    position: absolute;
+    bottom: 0;
+    /* min-height: 300px; */
+    /* background-image: url("/mountain-front-center.svg"); */
+}
+
+.mountainFront svg path {
+    transition: 5s;
 }
 
 .mountainBack {
@@ -39,4 +50,11 @@
 .mountain img {
     min-width: 800px;
     width: 100%;
+}
+
+.campfire {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -10,17 +10,26 @@ class Treeline extends Component {
         this.initialOffset = this.props.initialOffset
         this.density = 3
         this.scale = this.props.scale
+        this.variation = this.props.variation
         this.treeSize = {w: 250, h: 275 * this.scale}
         this.trees = []
     }
 
     generateTreeBoundaries() {
         // window.innerWidth
-        let numberOfTrees = Math.floor(window.innerWidth / (this.treeSize.w / this.density)) + 4
+        let numberOfTrees = Math.floor(window.innerWidth / (this.treeSize.w / this.density)) + 1
         let ongoingOffset = -this.initialOffset
         let tempTrees = []
         for (let i = 0; i < numberOfTrees; i++) {
-            tempTrees.push({index: i, offset: ongoingOffset})
+            if (this.variation == "clearing") {
+                if (i >= (numberOfTrees / 2) - 1 && i <= (numberOfTrees / 2) + 1) {
+                    // No trees
+                } else {
+                    tempTrees.push({index: i, offset: ongoingOffset})
+                }
+            } else {
+                tempTrees.push({index: i, offset: ongoingOffset})
+            }
             ongoingOffset += this.treeSize.w / this.density
         }
         return tempTrees
