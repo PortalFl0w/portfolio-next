@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import { wrapper } from '../components/store'
 import Navigation from '../components/nav'
 import Artwork from '../components/artwork'
+import Commander from '../components/artwork/commander'
 import Footer from '../components/ui-elements/footer'
 import Icon from '../components/icons/icon'
 // ui elements
@@ -24,6 +25,8 @@ function Home() {
       <Navigation />
 
       <Artwork />
+
+      <Commander />
 
       <main className="main">
         <div id="projects" className={styles.projects + " " + styles.homeFullSection}>

@@ -10,12 +10,12 @@ class Clock extends Component {
     }
 
     tick() {
-        this.props.dispatch({type: "GLOBAL_TIME", "payload": this.getCurrentComputedSeconds(this.timeSpeed)})
+        this.props.dispatch({type: "GLOBAL_TIME", "payload": this.getCurrentComputedSeconds(this.props.globalTimeSpeed)})
     }
 
     componentDidMount() {
         // Interval for tickrate
-        const timeInterval = setInterval(() => this.tick(), this.tickRate)
+        const timeInterval = setInterval(() => this.tick(), this.props.globalTickRate)
         this.setState({timeInterval})
 
         this.tick() // Tick once before interval starts
@@ -35,7 +35,7 @@ class Clock extends Component {
         if (this.props.globalTime == null) {
             return this.getCurrentDaySeconds()
         }
-        if (this.props.globalTime >= this.maxTime){
+        if (this.props.globalTime >= this.props.globalMaxTime){
             return 0
         }
         return this.props.globalTime + (1 * multiplier)

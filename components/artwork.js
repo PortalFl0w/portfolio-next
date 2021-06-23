@@ -75,15 +75,12 @@ class Artwork extends Component {
                 <Treeline position={80} scale={0.5} initialOffset={110} hue={this.getHueRGBString(0.3)} />
                 <Treeline position={60} scale={0.6} initialOffset={60} hue={this.getHueRGBString(0.2)} />
                 <Treeline position={0} scale={0.8} initialOffset={90} hue={this.getHueRGBString(0.1)} />
-                <div className={styles.mountain + " " + styles.mountainFront} >
-                    <svg viewBox="0 0 1920 400" preserveAspectRatio="xMidYMid meet">
-                        <path d=" M 0 282.939 Q 340.903 343.952 527 341.951 C 713.097 339.95 755.393 213.903 962.5 212.902 C 1169.608 211.902 1227.894 339.95 1432 341.951 Q 1636.106 343.952 1920 284 L 1920 400 L 0 400 L 0 282.939 Z " fill={this.getHueRGBString(0.15)}/>
-                    </svg>
+                <div className={styles.mountain + " " + styles.mountainFront} style={{backgroundColor: this.getHueRGBString(0.15)}}>
                 </div>
                 <div className={styles.campfire}>
                     <Image src="/fire.gif" width="60" height="40" />
                 </div>
-                <Treeline position={-40} scale={1} initialOffset={125} variation="clearing" hue={"#0a0a0a"} />
+                <Treeline position={-65} scale={1} initialOffset={125} pattern="clearing" hue={"#0a0a0a"} />
             </div>
             <div ref={this.renderRef}></div>
             {/* <LoadingOverlay/> */}

@@ -26,6 +26,7 @@ General:
 - Make it run faster! - Clean up render calls etc.
 - Controls for time/weather
 - Events system, display stuff depending on time/weather etc.
+- Better projects navigation
 
 Looks:
 - Mobile styling

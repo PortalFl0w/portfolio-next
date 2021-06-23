@@ -10,7 +10,7 @@ class Treeline extends Component {
         this.initialOffset = this.props.initialOffset
         this.density = 3
         this.scale = this.props.scale
-        this.variation = this.props.variation
+        this.pattern = this.props.pattern
         this.treeSize = {w: 250, h: 275 * this.scale}
         this.trees = []
     }
@@ -21,7 +21,7 @@ class Treeline extends Component {
         let ongoingOffset = -this.initialOffset
         let tempTrees = []
         for (let i = 0; i < numberOfTrees; i++) {
-            if (this.variation == "clearing") {
+            if (this.pattern == "clearing") {
                 if (i >= (numberOfTrees / 2) - 1 && i <= (numberOfTrees / 2) + 1) {
                     // No trees
                 } else {
