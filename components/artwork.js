@@ -78,7 +78,7 @@ class Artwork extends Component {
                 <div className={styles.mountain + " " + styles.mountainFront} style={{backgroundColor: this.getHueRGBString(0.15)}}>
                 </div>
                 <div className={styles.campfire}>
-                    <Image src="/fire.gif" width="60" height="40" />
+                    <Image src="/camp.gif" width="200" height="80" />
                 </div>
                 <Treeline position={-65} scale={1} initialOffset={125} pattern="clearing" hue={"#0a0a0a"} />
             </div>

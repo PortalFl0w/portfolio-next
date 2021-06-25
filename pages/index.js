@@ -45,16 +45,22 @@ function Home() {
         <div className={styles.about+" "+styles.homeFullSection} id="about">
           <div className={styles.contentWrapper}>
           <div className={styles.section}>
-            <p><Icon icon="cog" color="rgb(252,176,69)"/>Developing across the stack</p>
-            <p><Icon icon="light-bulb" color="rgb(252,176,69)"/>5+ years of experience in tech</p>
-            <p><Icon icon="code" color="rgb(252,176,69)"/>Node.js, React, Python and more</p>
-            <p><Icon icon="heart" color="rgb(252,176,69)"/>Arrays start at 0</p>
+            <p><Icon icon="cog" color="rgb(252,176,69)"/><span>Developing across the stack</span></p>
+            <p><Icon icon="light-bulb" color="rgb(252,176,69)"/><span>5+ years of experience in tech</span></p>
+            <p><Icon icon="code" color="rgb(252,176,69)"/><span>Node.js, React, Python and more</span></p>
+            <p><Icon icon="heart" color="rgb(252,176,69)"/><span>Arrays start at 0</span></p>
           </div>
-          <div className={styles.section}>
+          <div className={styles.externalButtons}>
+              <div className={styles.buttonColumn}>
               <FullWidthButton icon="github" link="https://github.com/PortalFl0w" text="GitHub" />
+              </div>
+              <div className={styles.buttonColumn}>
               <FullWidthButton icon="linkedin" link="https://www.linkedin.com/in/matt-l5543/" text="LinkedIn" />
+              </div>
+              <div className={styles.buttonColumn}>
               <FullWidthButton icon="mail" link="mailto:me@mattlipski.com" text="Email Me" />
-          </div> 
+              </div>
+            </div>
           </div>
         </div>
         <Footer />

@@ -29,3 +29,14 @@
     background-position: center center;
 }
 
+@media only screen and (max-width: 768px) {
+    .projectGridBox {
+        flex-basis: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .projectGridBox {
+        flex-basis: 100%;
+    }
+}
